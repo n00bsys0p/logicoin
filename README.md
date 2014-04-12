@@ -6,8 +6,15 @@ Copyright (c) 2013-2014 LogiCoin Developers
 
 ================================
 
+![GitHub Logo](https://github.com/Logicoin/logicoin/tree/master/src/qt/res/images/splash.png)
+
 Building
 --------
+Linux:
+
+	Git clone https://github.com/logicoin/logicoin
+	cd logicoin/src
+	make -f makefile.unix USE_UPNP=-
 
 
 
