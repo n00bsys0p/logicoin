@@ -3010,7 +3010,7 @@ bool InitBlockIndex() {
             uint256 hashTarget = CBigNum().SetCompact(block.nBits).getuint256();
             uint256 thash;
 
-            loop
+            while (true)
             {
                 thash = block.GetHash();
                 if (thash <= hashTarget)
@@ -4807,7 +4807,7 @@ void static LogiCoinMiner(CWallet *pwallet)
     CReserveKey reservekey(pwallet);
     unsigned int nExtraNonce = 0;
 
-    try { loop {
+    try { while (true) {
         while (vNodes.empty())
             MilliSleep(1000);
 
@@ -4845,12 +4845,12 @@ void static LogiCoinMiner(CWallet *pwallet)
         //
         int64 nStart = GetTime();
         uint256 hashTarget = CBigNum().SetCompact(pblock->nBits).getuint256();
-        loop
+        while (true)
         {
             unsigned int nHashesDone = 0;
 
             uint256 thash;
-            loop
+            while (true)
             {
                 thash = pblock->GetHash();
                 if (thash <= hashTarget)
